@@ -2,9 +2,9 @@
 require "pry"
 
 
+
 class CashRegister
 
-    # attr_reader 
     attr_accessor :total, :discount 
 
     def initialize(discount=0, total=0)
@@ -17,7 +17,6 @@ class CashRegister
        @product_name, @price, @quantity = product_name, price, quantity
        @array_of_items << ((@product_name + " " ) * @quantity).split
        self.total += @price * @quantity 
-      
     end
 
     def apply_discount
